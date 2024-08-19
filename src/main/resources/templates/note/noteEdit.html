@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Note</title>
+</head>
+<body>
+<form th:action="@{/note/edit}" method="post">
+    <input type="hidden" name="id" th:value="${note.id}" />
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title" th:value="${note.title}" /><br>
+    <label for="content">Content:</label><br>
+    <textarea id="content" name="content" th:text="${note.content}"></textarea><br>
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>
