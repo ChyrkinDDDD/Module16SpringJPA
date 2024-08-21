@@ -1,6 +1,5 @@
 package org.example.module16.controller;
 
-
 import lombok.RequiredArgsConstructor;
 import org.example.module16.dao.model.Note;
 import org.example.module16.service.NoteService;
