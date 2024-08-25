@@ -47,28 +47,11 @@ public class NoteService {
         );
     }
 
-    public Note add(Note note){
-        noteRepository.save(note);
-        return note;
-    }
-
     public void deleteById(long id){
         if(noteRepository.existsById(id)){
             noteRepository.deleteById(id);
         }else {
             throw new NoteNotFoundByThisIdException();
         }
-    }
-
-    public void update(Note note){
-        if(noteRepository.existsById(note.getId())){
-            noteRepository.save(note);
-        }else{
-            throw new NoteNotFoundByThisIdException();
-        }
-    }
-
-    public Note getById(long id){
-        return noteRepository.findById(id).orElseThrow(NoteNotFoundByThisIdException::new);
     }
 }
