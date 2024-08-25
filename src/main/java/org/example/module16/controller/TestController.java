@@ -13,4 +13,5 @@ public class TestController {
         modelAndView.addObject("test", "Hello World from test controller");
         return modelAndView;
     }
+
 }
